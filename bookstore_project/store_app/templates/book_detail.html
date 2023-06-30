@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <ul>Title : {{ book.title }}</ul>
+    <ul>Author : {{ book.author }}</ul>
+    <ul>Price : Rs {{ book.price }}/-</ul>
+    <ul>Published On : {{ book.publication_date }}</ul>
+    <ul>Description : {{ book.description }}</ul>
+</div>
+
+<div class="container">
+    <form method="POST" class="sub-container">
+        {% csrf_token %}
+            {{fm.as_p}}
+            <input type="submit" value="Save">
+    </form>
+    {{msg}}
+</div>
+
+<div class="container">
+    {% for review in reviews %}
+        <ul>Review : {{ review.content }}</ul>
+        <ul>Rating : {{ review.rating }}/5</ul>
+    {% empty %}
+        No Reviews Available
+    {% endfor %}
+</div>
+{% endblock %}

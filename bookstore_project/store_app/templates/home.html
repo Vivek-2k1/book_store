@@ -3,22 +3,26 @@
 {% block content %}
 
 <h2 class="heading">Home</h2>
-
 <div class="container">
     <form method="get" action="{% url 'home' %}" class="sub-container">
-        <label for="author_name">Author Name:</label>
-        <input type="text" id="author_name" name="author_name">
-        <button type="submit">Filter</button>
+        <ul><label for="author_name">Author Name:</label></ul>
+        <ul><input type="text" id="author_name" name="author_name"></ul>
+        <ul><button type="submit">Filter</button></ul>
     </form>
 </div>
+
+
+
 <div class="container">
     {% for book in books %}
+    <ul class="sub-container">
     <ul>Title : <a href="{% url 'book_detail' id=book.id %}">{{ book.title }}</a></ul>
     <ul>Author : {{ book.author }}</ul>
     <ul>Price : Rs {{ book.price }} /-</ul>
     {% empty %}
         <ul>No Books Available</ul>
     {% endfor %}
+    </ul>
 </div>
 
 {% endblock %}

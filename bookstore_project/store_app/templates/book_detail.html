@@ -20,9 +20,12 @@
 </div>
 
 <div class="container">
+    <h3>Reviews</h3>
     {% for review in reviews %}
+    <ul class="sub-container">
         <ul>Review : {{ review.content }}</ul>
         <ul>Rating : {{ review.rating }}/5</ul>
+    </ul>
     {% empty %}
         No Reviews Available
     {% endfor %}

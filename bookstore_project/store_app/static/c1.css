@@ -21,6 +21,34 @@
     text-align: center;
 }
 
+.sub-container,
+.sub-container label{
+  background-color: #FFF4F4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.sub-container input[type="text"],
+.sub-container select,
+.sub-container textarea,
+.sub-container input[type="date"],
+.sub-container input[type="number"]{
+  background-color: #F7E6C4;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.sub-container button{
+  padding: 8px;
+  border: 1px solid #f3b956;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #F1C376;
+  width: 50%;
+}
 
 .sub-container input[type="submit"] {
     background-color: #F1C376;
@@ -31,6 +59,7 @@
     font-size: 16px;
     cursor: pointer;
   }
+
 
 .container {
     text-align: center;
@@ -67,4 +96,9 @@ table tr:hover {
 
 ul a{
     text-decoration: none;
+    color: black;
+}
+
+ul a:hover{
+  text-decoration: underline;
 }
